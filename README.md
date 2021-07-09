@@ -7,6 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Installation
+
+Download package and follow some additional steps to be sure that everything will works fine.
+
+Create a new database on mysql for the project.
+
+Copy `.env.example` as `.env` and change the `DB_DATABASE` value for the database name created before.
+
+Run these commands to run the project propertly:
+```sh
+$ composer update
+$ php artisan migrate --seed
+$ php artisan storage:link
+$ php artisan key:generate
+```
+If using linux maybe you want to to unlock these files:
+```sh 
+.../storage/framework/sessions 
+.../storage/framework/views
+.../storage/logs/laravel.log 
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -59,3 +81,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+"# Laravel-7-Api" 
