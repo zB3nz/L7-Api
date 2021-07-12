@@ -29,6 +29,11 @@ If using linux maybe you want to to unlock these files:
 .../storage/logs/laravel.log 
 ```
 
+If you receive a driver sql error try this command:
+```sh
+sudo apt-get install php7.0-sqlite
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
