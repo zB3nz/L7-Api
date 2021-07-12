@@ -29,7 +29,7 @@ If using linux maybe you want to to unlock these files:
 .../storage/logs/laravel.log 
 ```
 
-If you receive a driver sql error try this command:
+If you receive a sql driver error try this command:
 ```sh
 sudo apt-get install php7.0-sqlite
 ```
