@@ -23,7 +23,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(
+            $this->post->paginate() //ya lo regresa en json y status: 200
+        );
     }
 
     /**
@@ -57,9 +59,11 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, Post $post)
     {
-        //
+        $post->update($request->all());
+
+        return response()->json($post); 
     }
 
     /**
@@ -70,6 +74,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return response()->json(null, 204);
+        //se puede cambiar null por un array con un mensaje personalizado 
     }
 }
